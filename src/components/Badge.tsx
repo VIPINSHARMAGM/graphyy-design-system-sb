@@ -1,7 +1,7 @@
 import React from 'react';
 import './Badge.css';
 
-interface BadgeProps {
+interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * What background color to use
    */
@@ -16,7 +16,7 @@ interface BadgeProps {
  * Primary UI component for user interaction
  */
 export const Badge = ({
-  backgroundColor,
+  backgroundColor = '#eee',
   label,
   ...props
 }: BadgeProps) => {
